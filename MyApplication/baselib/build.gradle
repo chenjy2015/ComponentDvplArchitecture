@@ -1,0 +1,57 @@
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.alibaba.arouter'
+
+kapt {
+    arguments {
+        arg("AROUTER_MODULE_NAME", project.getName())
+    }
+}
+//1. 定义 config 变量
+def config = rootProject.ext
+
+android {
+    compileSdkVersion  config.android.compileSdkVersion
+    buildToolsVersion config.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion config.android.minSdkVersion
+        targetSdkVersion config.android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding{
+        enabled = true
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation config.android.appcompat
+    testImplementation config.android.junit
+    androidTestImplementation config.android.test_runner
+    androidTestImplementation config.android.test_espresso
+
+    //kotlin
+    implementation config.android.kotlin_stdlib_jdk7
+    kapt config.dependencies.databinding_compiler
+
+    //alibaba arouter
+    api config.dependencies.arouterApi
+    //注意！arouter-compiler 这个依赖必须在build.gradle中声明，只在base_module中声明然后引用base_module中引用是无效的！
+    kapt config.dependencies.arouterCompiler
+}
