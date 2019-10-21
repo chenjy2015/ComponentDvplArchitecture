@@ -1,6 +1,6 @@
-## ComponentDvplArchitecture (组件化开发架构demo)##
+## ComponentDvplArchitecture (组件化开发架构demo)
 
-### 基于kotlin为开发语言 引入阿里云Arouter框架 自定义组件化开发模式架构 ###
+### 基于kotlin为开发语言 引入阿里云Arouter框架 自定义组件化开发模式架构 
 
 * app（主工程） 
  * 做一些初始化操作
