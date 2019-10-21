@@ -1,12 +1,13 @@
 package com.example.myapplication
 
-import android.app.Application
-import com.alibaba.android.arouter.launcher.ARouter
+import android.util.Log
+import com.example.baselib.BaseApplication
 import com.example.baselib.arouter.ARouterManager
 
-class MyApplication : Application() {
+class MyApplication : BaseApplication() {
     override fun onCreate() {
         super.onCreate()
+        Log.d("Application", "MyApplication -- create()")
         ARouterManager.instance.init(this@MyApplication)
     }
 

@@ -1,6 +1,11 @@
 package com.example.baselib.arouter
 
 class ARouterConstants {
+
+    object router_service{
+        const val SERVICE_LOGIN = "/service/login"
+    }
+
     object router_path {
         const val ACTIVITY_URL_DEMO = "/app/demo"
         const val ACTIVITY_URL_MAIN = "/app/main"
@@ -11,6 +16,6 @@ class ARouterConstants {
     }
 
     object router_clientb_path {
-        const val ACTIVITY_URL_HOME = "/clienta/home"
+        const val ACTIVITY_URL_HOME = "/clientb/home"
     }
 }
