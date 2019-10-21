@@ -40,8 +40,6 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation config.android.appcompat
     implementation config.android.core_ktx
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation config.android.junit
     implementation config.android.constraintlayout
     androidTestImplementation config.android.test_runner

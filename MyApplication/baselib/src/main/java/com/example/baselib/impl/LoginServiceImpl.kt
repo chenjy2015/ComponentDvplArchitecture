@@ -12,13 +12,15 @@ import com.example.baselib.service.LoginService
 @Route(path = ARouterConstants.router_service.SERVICE_LOGIN, name = "login service")
 class LoginServiceImpl : LoginService {
 
+    lateinit var context:Context
     override fun init(context: Context?) {
+        this.context = context!!
     }
 
     override fun intentLogin(user: UserVO) {
         ARouterManager.instance.getPostcard(ARouterConstants.router_clienta_path.ACTIVITY_URL_LOGIN)
             .withParcelable("user", user)
-            .navigation()
+            .navigation(context, LoginNavigationCallbackImpl())
     }
 
 }
