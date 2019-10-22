@@ -69,4 +69,8 @@ dependencies {
     implementation project(':baselib')
     //kotlin arouter 注意！arouter-compiler 这个依赖必须在build.gradle中声明，只在base_module中声明然后引用base_module中引用是无效的！
     kapt config.dependencies.arouterCompiler
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+}
+repositories {
+    mavenCentral()
 }

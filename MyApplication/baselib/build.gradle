@@ -58,5 +58,21 @@ android {
         api config.dependencies.arouterApi
         //注意！arouter-compiler 这个依赖必须在build.gradle中声明，只在base_module中声明然后引用base_module中引用是无效的！
         kapt config.dependencies.arouterCompiler
+
+        // multitype
+        api config.dependencies.multitype
+        api config.dependencies.blankj
+
+        //rxjava
+//        implementation config.dependencies.rxjava
+        api config.dependencies.rxbingding
+        api config.dependencies.rxlifecycle
+        api config.dependencies.rxlifecycle_components
     }
 }
+//dependencies {
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+//}
+//repositories {
+//    mavenCentral()
+//}

@@ -1,7 +1,7 @@
 package com.example.clientb
 
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.example.baselib.BaseUIActivity
+import com.example.baselib.activity.BaseUIActivity
 import com.example.baselib.arouter.ARouterConstants
 import com.example.baselib.viewmodel.HomeViewModel
 import com.example.clientb.databinding.ActivityHomeBinding

@@ -15,7 +15,7 @@ import java.lang.RuntimeException
  * @Create by : 2019/10/21
  *
  */
-@Interceptor(name = "login", priority = ARouterConstants.router_intercept_priority.LOGIN_INTERCEPT_PRIORITY)
+//@Interceptor(name = "login", priority = ARouterConstants.router_intercept_priority.LOGIN_INTERCEPT_PRIORITY)
 class LoginIntercept : IInterceptor {
     override fun process(postcard: Postcard?, callback: InterceptorCallback?) {
         //Do some checking work

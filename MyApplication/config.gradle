@@ -16,6 +16,15 @@ ext{
     dependencies = [
             "arouterApi": 'com.alibaba:arouter-api:1.5.0',
             "arouterCompiler":'com.alibaba:arouter-compiler:1.2.2',
-            "databinding_compiler":"com.android.databinding:compiler:3.0.1"
+            "databinding_compiler":"com.android.databinding:compiler:3.0.1",
+            "multitype":"com.drakeet.multitype:multitype:4.0.0",
+            "recyclerview":"androidx.recyclerview:recyclerview:1.0.0",
+            "flexibledivider":"com.yqritc:recyclerview-flexibledivider:1.4.0",
+            "rxjava":"io.reactivex.rxjava3:rxjava:3.0.0-RC4",
+            "rxandroid":"io.reactivex.rxjava2:rxandroid:2.1.1",
+            "rxlifecycle":"com.trello.rxlifecycle3:rxlifecycle-android-lifecycle-kotlin:3.1.0",
+            "rxlifecycle_components":"com.trello.rxlifecycle3:rxlifecycle-components:3.1.0",
+            "rxbingding":"com.jakewharton.rxbinding3:rxbinding:3.0.0",
+            "blankj":"com.blankj:utilcodex:1.25.9",
     ]
 }
