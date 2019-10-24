@@ -55,7 +55,7 @@ dependencies {
     kapt config.dependencies.arouterCompiler
     implementation config.dependencies.recyclerview
     implementation config.dependencies.flexibledivider
-    implementation config.dependencies.rxjava
+//    implementation config.dependencies.rxjava
     implementation config.dependencies.rxbingding
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }

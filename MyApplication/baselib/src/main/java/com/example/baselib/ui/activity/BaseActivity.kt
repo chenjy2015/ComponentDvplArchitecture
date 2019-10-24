@@ -1,4 +1,4 @@
-package com.example.baselib.activity
+package com.example.baselib.ui.activity
 
 import android.annotation.SuppressLint
 import android.os.Bundle

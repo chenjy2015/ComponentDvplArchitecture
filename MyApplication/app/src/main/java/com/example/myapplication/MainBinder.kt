@@ -1,8 +1,8 @@
 package com.example.myapplication
 
-import com.example.baselib.binder.BaseItemViewBinder
-import com.example.baselib.binder.BaseViewHolder
-import com.example.baselib.impl.OnBinderItemClickListener
+import com.example.baselib.ui.binder.BaseItemViewBinder
+import com.example.baselib.ui.binder.BaseViewHolder
+import com.example.baselib.i.OnBinderItemClickListener
 import com.example.myapplication.databinding.BinderMainBinding
 
 class MainBinder(onItemClick: OnBinderItemClickListener<String>) :

@@ -6,6 +6,6 @@ class KotlinDemo {
     var age = 10
 
     fun log(){
-        System.out.println(name + age)
+        println(name + age)
     }
 }

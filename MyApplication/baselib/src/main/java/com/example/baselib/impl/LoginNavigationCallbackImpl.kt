@@ -24,7 +24,7 @@ class LoginNavigationCallbackImpl : NavigationCallback {
 
     override fun onInterrupt(postcard: Postcard?) {
         var path: String = postcard?.path.toString()
-        Log.d("onInterrupt", "path :" + path)
+        Log.d("onInterrupt", "path :$path")
     }
 
 }

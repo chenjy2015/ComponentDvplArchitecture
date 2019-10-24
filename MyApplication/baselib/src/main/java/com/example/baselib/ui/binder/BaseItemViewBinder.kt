@@ -1,4 +1,4 @@
-package com.example.baselib.binder
+package com.example.baselib.ui.binder
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,8 +6,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import com.drakeet.multitype.ItemViewBinder
-import com.example.baselib.activity.BaseActivity
-import com.example.baselib.impl.OnBinderItemClickListener
+import com.example.baselib.ui.activity.BaseActivity
 
 /**
  *

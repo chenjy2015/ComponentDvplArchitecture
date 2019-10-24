@@ -1,4 +1,4 @@
-package com.example.baselib.activity
+package com.example.baselib.ui.activity
 
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable

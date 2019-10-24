@@ -2,7 +2,7 @@ package com.example.myapplication
 
 import com.alibaba.android.arouter.facade.annotation.Autowired
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.example.baselib.activity.BaseUIActivity
+import com.example.baselib.ui.activity.BaseUIActivity
 import com.example.baselib.arouter.ARouterConstants
 import com.example.baselib.utils.IntentManager
 import com.example.baselib.viewmodel.LoginViewModel
@@ -20,6 +20,7 @@ class ArouterDemoActivity : BaseUIActivity<LoginViewModel, ActivityArouterDemoBi
 
     override fun init() {
         getDataBinding().title.text = name
+        setSwipeBackEnable(true)
     }
 
     override fun initEvent() {

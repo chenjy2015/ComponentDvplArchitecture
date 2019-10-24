@@ -1,4 +1,4 @@
-package com.example.baselib.fragment
+package com.example.baselib.ui.fragment
 
 import android.app.Activity
 import android.content.Context
@@ -10,7 +10,7 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.annotation.Nullable
 import com.example.baselib.R
-import com.example.baselib.activity.SwipeBackActivity
+import com.example.baselib.ui.activity.SwipeBackActivity
 import com.example.baselib.widget.SwipeBackLayout
 import com.example.myapplication.BaseViewModel
 

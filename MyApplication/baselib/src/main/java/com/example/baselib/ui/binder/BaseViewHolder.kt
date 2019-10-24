@@ -1,4 +1,4 @@
-package com.example.baselib.binder
+package com.example.baselib.ui.binder
 
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView

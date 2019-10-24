@@ -1,4 +1,4 @@
-package com.example.baselib.fragment
+package com.example.baselib.ui.fragment
 
 import android.content.Context
 import android.os.Bundle

@@ -1,7 +1,7 @@
 package com.example.clienta
 
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.example.baselib.activity.BaseUIActivity
+import com.example.baselib.ui.activity.BaseUIActivity
 import com.example.baselib.arouter.ARouterConstants
 import com.example.baselib.bean.UserVO
 import com.example.baselib.utils.IntentManager

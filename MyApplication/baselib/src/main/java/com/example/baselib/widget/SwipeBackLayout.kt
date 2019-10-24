@@ -17,9 +17,8 @@ import androidx.customview.widget.ViewDragHelper
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import com.example.baselib.R
-import com.example.baselib.activity.SwipeBackActivity
-import com.example.baselib.fragment.SwipeBackFragment
-import java.lang.annotation.RetentionPolicy
+import com.example.baselib.ui.activity.SwipeBackActivity
+import com.example.baselib.ui.fragment.SwipeBackFragment
 import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.min

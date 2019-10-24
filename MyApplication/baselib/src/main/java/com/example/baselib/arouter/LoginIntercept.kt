@@ -1,4 +1,4 @@
-package com.example.baselib.service
+package com.example.baselib.arouter
 
 import android.content.Context
 import com.alibaba.android.arouter.facade.Postcard

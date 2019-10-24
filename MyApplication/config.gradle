@@ -26,5 +26,12 @@ ext{
             "rxlifecycle_components":"com.trello.rxlifecycle3:rxlifecycle-components:3.1.0",
             "rxbingding":"com.jakewharton.rxbinding3:rxbinding:3.0.0",
             "blankj":"com.blankj:utilcodex:1.25.9",
+            "okhttp3":"com.squareup.okhttp3:okhttp:3.11.0",
+            "okhttp3_interceptor":"com.squareup.okhttp3:logging-interceptor:3.8.0",
+            "retrofit2":"com.squareup.retrofit2:retrofit:2.3.0",
+            "retrofit2_adapter":"com.squareup.retrofit2:adapter-rxjava2:2.3.0",
+//            "retrofit2_adapter":"com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0",
+            "converter_gson":"com.squareup.retrofit2:converter-gson:2.3.0",
+
     ]
 }

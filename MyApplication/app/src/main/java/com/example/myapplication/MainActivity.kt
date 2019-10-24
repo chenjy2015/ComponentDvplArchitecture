@@ -3,12 +3,16 @@ package com.example.myapplication
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.alibaba.android.arouter.facade.annotation.Autowired
 import com.alibaba.android.arouter.facade.annotation.Route
+import com.blankj.utilcode.util.LogUtils
 import com.drakeet.multitype.MultiTypeAdapter
-import com.example.baselib.activity.BaseUIActivity
 import com.example.baselib.arouter.ARouterConstants
-import com.example.baselib.bean.UserVO
-import com.example.baselib.impl.OnBinderItemClickListener
-import com.example.baselib.service.LoginService
+import com.example.baselib.bean.LunarCalendarVO
+import com.example.baselib.http.HttpRequest
+import com.example.baselib.http.HttpThrowable
+import com.example.baselib.http.IHttpRequestCall
+import com.example.baselib.i.OnBinderItemClickListener
+import com.example.baselib.i.LoginService
+import com.example.baselib.ui.activity.BaseUIActivity
 import com.example.baselib.utils.IntentManager
 import com.example.baselib.viewmodel.LoginViewModel
 import com.example.myapplication.databinding.ActivityMainBinding
@@ -35,11 +39,13 @@ class MainActivity : BaseUIActivity<LoginViewModel, ActivityMainBinding>() {
 
     override fun init() {
         adapter = MultiTypeAdapter()
-        adapter.register(String::class.java, MainBinder(object :OnBinderItemClickListener<String>{
+        adapter.register(String::class.java, MainBinder(object :
+            OnBinderItemClickListener<String> {
             override fun onItemClick(position: Int, t: String) {
-                when(position){
+                when (position) {
                     0 -> IntentManager.intentDemoActivity("this is from main call")
-                    1 -> lgService.intentLogin(UserVO("刘先生", 28))
+//                    1 -> lgService.intentLogin(UserVO("刘先生", 28))
+                    1 -> request()
                 }
             }
         }))
@@ -51,7 +57,28 @@ class MainActivity : BaseUIActivity<LoginViewModel, ActivityMainBinding>() {
     }
 
     override fun initEvent() {
+    }
 
+    fun request(){
+//        HttpRequest.getBook(10023, object : IHttpRequestCall<UserVO> {
+//            override fun success(t: UserVO) {
+//                LogUtils.d(HttpRequest.TAG, "success : bookInfo -->  $t")
+//            }
+//
+//            override fun <E : HttpThrowable> error(e: E) {
+//                LogUtils.d(HttpRequest.TAG, "failed : $e")
+//            }
+//        })
+
+            HttpRequest.getLunarCalendar("2019-10-24", object : IHttpRequestCall<LunarCalendarVO> {
+                override fun success(t: LunarCalendarVO) {
+                    LogUtils.d(HttpRequest.TAG, "success : bookInfo -->  $t")
+                }
+
+                override fun <E : HttpThrowable> error(e: E) {
+                    LogUtils.d(HttpRequest.TAG, "failed : $e")
+                }
+            })
     }
 
     override fun initData() {

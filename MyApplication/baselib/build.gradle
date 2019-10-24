@@ -68,6 +68,13 @@ android {
         api config.dependencies.rxbingding
         api config.dependencies.rxlifecycle
         api config.dependencies.rxlifecycle_components
+
+        //http
+        api config.dependencies.okhttp3
+        api config.dependencies.okhttp3_interceptor
+        api config.dependencies.retrofit2
+        api config.dependencies.retrofit2_adapter
+        api config.dependencies.converter_gson
     }
 }
 //dependencies {

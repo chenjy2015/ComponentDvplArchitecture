@@ -1,4 +1,4 @@
-package com.example.baselib.fragment
+package com.example.baselib.ui.fragment
 
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
@@ -8,7 +8,6 @@ import android.content.Context
 import android.view.View
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
-import com.example.baselib.utils.ViewUtils
 import com.example.myapplication.BaseViewModel
 
 

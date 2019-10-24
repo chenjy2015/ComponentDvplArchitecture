@@ -1,4 +1,4 @@
-package com.example.baselib.activity
+package com.example.baselib.ui.activity
 
 import com.example.myapplication.BaseViewModel
 import android.os.Bundle
