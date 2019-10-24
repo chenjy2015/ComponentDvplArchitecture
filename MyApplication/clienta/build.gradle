@@ -71,6 +71,4 @@ dependencies {
     kapt config.dependencies.arouterCompiler
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
-repositories {
-    mavenCentral()
-}
+
