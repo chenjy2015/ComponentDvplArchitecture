@@ -14,7 +14,7 @@ class HttpRequest {
 
     companion object {
 
-        val TAG: String = "HttpRequest"
+        const val TAG: String = "HttpRequest"
 
         private val service: IHttpService = HttpRequestManager.instance.create(IHttpService::class.java)
 

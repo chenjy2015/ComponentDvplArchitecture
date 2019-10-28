@@ -11,15 +11,15 @@ import androidx.recyclerview.widget.RecyclerView
 import android.view.View
 
 
-abstract class BaseUIActivity<VM : BaseViewModel, out VD : ViewDataBinding> : SwipeBackActivity<VM>() {
+abstract class BaseUIActivity<VM : BaseViewModel, out VD : ViewDataBinding> : BaseSwipeBackActivity<VM>() {
+
+    private lateinit var dataBinding: VD
+    private lateinit var viewUtils: ViewUtils
 
     abstract fun getLayoutId(): Int
     abstract fun init()
     abstract fun initEvent()
     abstract fun initData()
-
-    private lateinit var dataBinding: VD
-    private lateinit var viewUtils:ViewUtils
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,11 +35,11 @@ abstract class BaseUIActivity<VM : BaseViewModel, out VD : ViewDataBinding> : Sw
         return dataBinding
     }
 
-    fun showShortToast(s:String){
+    fun showShortToast(s: String) {
         Toast.makeText(this@BaseUIActivity, s, Toast.LENGTH_SHORT).show()
     }
 
-    fun showLongToast(s:String){
+    fun showLongToast(s: String) {
         Toast.makeText(this@BaseUIActivity, s, Toast.LENGTH_LONG).show()
     }
 

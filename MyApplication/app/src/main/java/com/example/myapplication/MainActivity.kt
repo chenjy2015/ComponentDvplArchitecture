@@ -1,88 +1,44 @@
 package com.example.myapplication
 
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.alibaba.android.arouter.facade.annotation.Autowired
+import android.os.Build
+import android.os.Bundle
+import android.view.WindowManager
+import androidx.annotation.RequiresApi
 import com.alibaba.android.arouter.facade.annotation.Route
-import com.blankj.utilcode.util.LogUtils
-import com.drakeet.multitype.MultiTypeAdapter
 import com.example.baselib.arouter.ARouterConstants
-import com.example.baselib.bean.LunarCalendarVO
-import com.example.baselib.http.HttpRequest
-import com.example.baselib.http.HttpThrowable
-import com.example.baselib.http.IHttpRequestCall
-import com.example.baselib.i.OnBinderItemClickListener
-import com.example.baselib.i.LoginService
 import com.example.baselib.ui.activity.BaseUIActivity
 import com.example.baselib.utils.IntentManager
 import com.example.baselib.viewmodel.LoginViewModel
 import com.example.myapplication.databinding.ActivityMainBinding
-import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration
 
 /**
  *
  * @Author :  chenjiayou
- * @Dscription :  app 主界面
+ * @Dscription :  app 主界面 做中转 不做任何界面
  * @Create by : 2019/10/21
  *
  */
-@Route(path = ARouterConstants.router_path.ACTIVITY_URL_MAIN)
+@Route(path = ARouterConstants.router_path_activity.ACTIVITY_PATH_MAIN)
 class MainActivity : BaseUIActivity<LoginViewModel, ActivityMainBinding>() {
 
-    @Autowired(name = ARouterConstants.router_service.SERVICE_LOGIN)
-    lateinit var lgService: LoginService
-    lateinit var adapter: MultiTypeAdapter
-    var menus = arrayOf("pass value to demo", "go to login")
+    @RequiresApi(Build.VERSION_CODES.KITKAT)
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
+    }
     override fun getLayoutId(): Int {
         return R.layout.activity_main
     }
 
     override fun init() {
-        adapter = MultiTypeAdapter()
-        adapter.register(String::class.java, MainBinder(object :
-            OnBinderItemClickListener<String> {
-            override fun onItemClick(position: Int, t: String) {
-                when (position) {
-                    0 -> IntentManager.intentDemoActivity("this is from main call")
-//                    1 -> lgService.intentLogin(UserVO("刘先生", 28))
-                    1 -> request()
-                }
-            }
-        }))
-        adapter.items = menus.asList()
-        getDataBinding().recycler.adapter = adapter
-        getDataBinding().recycler.adapter?.notifyDataSetChanged()
-        getDataBinding().recycler.layoutManager = LinearLayoutManager(this@MainActivity)
-        getDataBinding().recycler.addItemDecoration(HorizontalDividerItemDecoration.Builder(this@MainActivity).build())
+        IntentManager.intentHomeActivity()
     }
 
     override fun initEvent() {
     }
 
-    fun request(){
-//        HttpRequest.getBook(10023, object : IHttpRequestCall<UserVO> {
-//            override fun success(t: UserVO) {
-//                LogUtils.d(HttpRequest.TAG, "success : bookInfo -->  $t")
-//            }
-//
-//            override fun <E : HttpThrowable> error(e: E) {
-//                LogUtils.d(HttpRequest.TAG, "failed : $e")
-//            }
-//        })
-
-            HttpRequest.getLunarCalendar("2019-10-24", object : IHttpRequestCall<LunarCalendarVO> {
-                override fun success(t: LunarCalendarVO) {
-                    LogUtils.d(HttpRequest.TAG, "success : bookInfo -->  $t")
-                }
-
-                override fun <E : HttpThrowable> error(e: E) {
-                    LogUtils.d(HttpRequest.TAG, "failed : $e")
-                }
-            })
-    }
-
     override fun initData() {
-
     }
+
 
 }

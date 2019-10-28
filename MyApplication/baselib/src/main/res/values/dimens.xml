@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="layout_size_toolbar">40dp</dimen>
+    <dimen name="icon_size_toolbar">26dp</dimen>
+    <dimen name="note_size_toolbar">12dp</dimen>
+    <dimen name="note_text_size_toolbar">8sp</dimen>
+    <dimen name="console_title_height">56dp</dimen>
+    <dimen name="console_title_divider_height">28dp</dimen>
+    <dimen name="home_table_height">58dp</dimen>
+
+    <dimen name="console_margin">5dp</dimen>
+    <dimen name="console_close_size">32dp</dimen>
+    <dimen name="console_close_margin">16dp</dimen>
+</resources>

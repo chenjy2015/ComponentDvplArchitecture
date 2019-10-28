@@ -8,7 +8,7 @@ import com.example.baselib.utils.IntentManager
 import com.example.baselib.viewmodel.LoginViewModel
 import com.example.myapplication.databinding.ActivityArouterDemoBinding
 
-@Route(path = ARouterConstants.router_path.ACTIVITY_URL_DEMO)
+@Route(path = ARouterConstants.router_path_activity.ACTIVITY_PATH_DEMO)
 class ArouterDemoActivity : BaseUIActivity<LoginViewModel, ActivityArouterDemoBinding>() {
 
     @Autowired

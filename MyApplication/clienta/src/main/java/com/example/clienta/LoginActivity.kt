@@ -8,7 +8,7 @@ import com.example.baselib.utils.IntentManager
 import com.example.baselib.viewmodel.LoginViewModel
 import com.example.clienta.databinding.ActivityLoginBinding
 
-@Route(path = ARouterConstants.router_clienta_path.ACTIVITY_URL_LOGIN)
+@Route(path = ARouterConstants.router_path_activity.ACTIVITY_PATH_LOGIN)
 class LoginActivity : BaseUIActivity<LoginViewModel, ActivityLoginBinding>() {
 
     var userVO: UserVO? = null

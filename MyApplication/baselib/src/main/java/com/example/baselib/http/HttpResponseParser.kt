@@ -63,7 +63,7 @@ class HttpResponseParser {
         if (code == HttpConstant.HttpResponseCode.REQUEST_SUCCESS) {
             try {
                 if (body != null) {
-                    goon.fromJson(body?.string(), ResponseBodyBean::class.java)
+                    goon.fromJson(body.string(), ResponseBodyBean::class.java)
                 } else {
                     goon.fromJson(errorBody?.string(), ResponseBodyBean::class.java)
                 }

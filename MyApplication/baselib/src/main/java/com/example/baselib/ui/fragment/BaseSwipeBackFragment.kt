@@ -10,7 +10,7 @@ import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import androidx.annotation.Nullable
 import com.example.baselib.R
-import com.example.baselib.ui.activity.SwipeBackActivity
+import com.example.baselib.ui.activity.BaseSwipeBackActivity
 import com.example.baselib.widget.SwipeBackLayout
 import com.example.myapplication.BaseViewModel
 
@@ -21,7 +21,7 @@ import com.example.myapplication.BaseViewModel
  * @create: chenjiayou
  * create at 2018/11/21 9:38
  */
-abstract class SwipeBackFragment<VM : BaseViewModel> : BaseFragment<VM>() {
+abstract class BaseSwipeBackFragment<VM : BaseViewModel> : BaseFragment<VM>() {
     private var swipeBackLayout: SwipeBackLayout? = null
     private var mNoAnim: Animation? = null
     var mLocking = false
@@ -119,8 +119,8 @@ abstract class SwipeBackFragment<VM : BaseViewModel> : BaseFragment<VM>() {
     private fun setBackground(view: View?) {
         if (view != null && view.background == null) {
             var defaultBg = 0
-            if (_mActivity is SwipeBackActivity<*>) {
-                defaultBg = (_mActivity as SwipeBackActivity<*>).getDefaultFragmentBackground()
+            if (_mActivity is BaseSwipeBackActivity<*>) {
+                defaultBg = (_mActivity as BaseSwipeBackActivity<*>).getDefaultFragmentBackground()
             }
             if (defaultBg == 0) {
                 val background = windowBackground

@@ -15,7 +15,7 @@ import com.example.myapplication.BaseViewModel
  * @create: chenjiayou
  * create at 2018/11/21 9:38
  */
-abstract class SwipeBackActivity<VM : BaseViewModel> : BaseActivity<VM>() {
+abstract class BaseSwipeBackActivity<VM : BaseViewModel> : BaseActivity<VM>() {
     private var swipeBackLayout: SwipeBackLayout? = null
     /**
      * 当Fragment根布局 没有 设定background属性时,

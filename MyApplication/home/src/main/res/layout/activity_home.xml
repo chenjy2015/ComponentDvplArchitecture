@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".HomeActivity">
+
+    <data/>
+
+    <LinearLayout
+            android:background="@color/colorAccent"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <include layout="@layout/toolbar_home" android:id="@+id/toolbar"/>
+        <include layout="@layout/item_enterprise_console_title" android:id="@+id/console"/>
+
+        <com.example.home.widget.HomeTableView
+                android:id="@+id/homeTable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/main_fragment">
+        </FrameLayout>
+
+    </LinearLayout>
+
+</layout>

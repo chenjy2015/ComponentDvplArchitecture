@@ -2,22 +2,23 @@ package com.example.baselib.arouter
 
 class ARouterConstants {
 
-    object router_service{
+    object router_path_service{
         const val SERVICE_LOGIN = "/service/login"
     }
 
-    object router_path {
-        const val ACTIVITY_URL_DEMO = "/app/demo"
-        const val ACTIVITY_URL_MAIN = "/app/main"
+    object router_path_activity {
+        const val ACTIVITY_PATH_DEMO = "/app/demo"
+        const val ACTIVITY_PATH_MAIN = "/app/main"
+        const val ACTIVITY_PATH_HOME = "/app/home"
+        const val ACTIVITY_PATH_LOGIN = "/clienta/login"
+        const val ACTIVITY_PATH_HOME_CLIENTB = "/clientb/home"
     }
 
-    object router_clienta_path {
-        const val ACTIVITY_URL_LOGIN = "/clienta/login"
+    object router_path_fragment{
+        const val FRAGMENT_PATH_SETTING = "/home/setting"
+        const val FRAGMENT_PATH_WORKBENCH = "/home/workbench"
     }
 
-    object router_clientb_path {
-        const val ACTIVITY_URL_HOME = "/clientb/home"
-    }
 
     /**
      *

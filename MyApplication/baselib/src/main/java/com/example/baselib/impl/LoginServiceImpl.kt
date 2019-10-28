@@ -8,7 +8,7 @@ import com.example.baselib.bean.UserVO
 import com.example.baselib.i.LoginService
 
 // 实现接口
-@Route(path = ARouterConstants.router_service.SERVICE_LOGIN, name = "login service")
+@Route(path = ARouterConstants.router_path_service.SERVICE_LOGIN, name = "login service")
 class LoginServiceImpl : LoginService {
 
     lateinit var context:Context
@@ -17,7 +17,7 @@ class LoginServiceImpl : LoginService {
     }
 
     override fun intentLogin(user: UserVO) {
-        ARouterManager.instance.getPostcard(ARouterConstants.router_clienta_path.ACTIVITY_URL_LOGIN)
+        ARouterManager.instance.getPostcard(ARouterConstants.router_path_activity.ACTIVITY_PATH_LOGIN)
             .withParcelable("user", user)
             .navigation(context, LoginNavigationCallbackImpl())
     }

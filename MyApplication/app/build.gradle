@@ -45,6 +45,9 @@ dependencies {
     androidTestImplementation config.android.test_runner
     androidTestImplementation config.android.test_espresso
     implementation project(':baselib')
+    if (rootProject.isNeedHome.toBoolean()) {
+        implementation project(':home')
+    }
     if (rootProject.isNeedClientA.toBoolean()) {
         implementation project(':clienta')
     }

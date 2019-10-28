@@ -1,1 +1,1 @@
-include ':app', ':baselib', ':clienta', ':clientb'
+include ':app', ':baselib', ':clienta', ':clientb', ':home'

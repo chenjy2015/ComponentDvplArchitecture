@@ -12,6 +12,7 @@
             <option value="$PROJECT_DIR$/baselib" />
             <option value="$PROJECT_DIR$/clienta" />
             <option value="$PROJECT_DIR$/clientb" />
+            <option value="$PROJECT_DIR$/home" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

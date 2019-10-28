@@ -17,8 +17,8 @@ import androidx.customview.widget.ViewDragHelper
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import com.example.baselib.R
-import com.example.baselib.ui.activity.SwipeBackActivity
-import com.example.baselib.ui.fragment.SwipeBackFragment
+import com.example.baselib.ui.activity.BaseSwipeBackActivity
+import com.example.baselib.ui.fragment.BaseSwipeBackFragment
 import kotlin.math.abs
 import kotlin.math.max
 import kotlin.math.min
@@ -44,7 +44,7 @@ class SwipeBackLayout @JvmOverloads constructor(
 
     private var mActivity: FragmentActivity? = null
     private var mContentView: View? = null
-    private var mFragment: SwipeBackFragment<*>? = null
+    private var mFragment: BaseSwipeBackFragment<*>? = null
     private var mPreFragment: Fragment? = null
 
     private var mShadowLeft: Drawable? = null
@@ -281,7 +281,7 @@ class SwipeBackLayout @JvmOverloads constructor(
         }
     }
 
-    fun setFragment(fragment: SwipeBackFragment<*>, view: View) {
+    fun setFragment(fragment: BaseSwipeBackFragment<*>, view: View) {
         this.mFragment = fragment
         mContentView = view
     }
@@ -307,7 +307,7 @@ class SwipeBackLayout @JvmOverloads constructor(
         decor.addView(this)
     }
 
-    fun attachToFragment(swipeBackFragment: SwipeBackFragment<*>, view: View) {
+    fun attachToFragment(swipeBackFragment: BaseSwipeBackFragment<*>, view: View) {
         addView(view)
         setFragment(swipeBackFragment, view)
     }
@@ -391,16 +391,16 @@ class SwipeBackLayout @JvmOverloads constructor(
 
             if (mScrollPercent > 1) {
                 if (mFragment != null) {
-                    if (mPreFragment is SwipeBackFragment<*>) {
-                        (mPreFragment as SwipeBackFragment<*>).mLocking = true
+                    if (mPreFragment is BaseSwipeBackFragment<*>) {
+                        (mPreFragment as BaseSwipeBackFragment<*>).mLocking = true
                     }
                     if (!mFragment!!.isDetached()) {
                         mFragment!!.mLocking = true
                         mFragment!!.fragmentManager!!.popBackStackImmediate()
                         mFragment!!.mLocking = false
                     }
-                    if (mPreFragment is SwipeBackFragment<*>) {
-                        (mPreFragment as SwipeBackFragment<*>).mLocking = false
+                    if (mPreFragment is BaseSwipeBackFragment<*>) {
+                        (mPreFragment as BaseSwipeBackFragment<*>).mLocking = false
                     }
                 } else {
                     if (!mActivity!!.isFinishing) {
@@ -414,7 +414,7 @@ class SwipeBackLayout @JvmOverloads constructor(
         override fun getViewHorizontalDragRange(child: View): Int {
             if (mFragment != null) {
                 return 1
-            } else if (mActivity != null && (mActivity as SwipeBackActivity<*>).swipeBackPriority()) {
+            } else if (mActivity != null && (mActivity as BaseSwipeBackActivity<*>).swipeBackPriority()) {
                 return 1
             }
 

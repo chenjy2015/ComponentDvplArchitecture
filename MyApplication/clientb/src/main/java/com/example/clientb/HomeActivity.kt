@@ -6,7 +6,7 @@ import com.example.baselib.arouter.ARouterConstants
 import com.example.baselib.viewmodel.HomeViewModel
 import com.example.clientb.databinding.ActivityHomeBinding
 
-@Route(path = ARouterConstants.router_clientb_path.ACTIVITY_URL_HOME)
+@Route(path = ARouterConstants.router_path_activity.ACTIVITY_PATH_HOME_CLIENTB)
 class HomeActivity : BaseUIActivity<HomeViewModel, ActivityHomeBinding>() {
     override fun getLayoutId(): Int {
         return R.layout.activity_home

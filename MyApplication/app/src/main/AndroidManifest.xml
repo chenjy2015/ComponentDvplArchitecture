@@ -14,10 +14,10 @@
             tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".ArouterDemoActivity">
             <!--<intent-filter>-->
-                <!--<data android:host="m.cjy.com" android:scheme="arouter"/>-->
-                <!--<action android:name="android.intent.action.VIEW"/>-->
-                <!--<category android:name="android.intent.category.DEFAULT"/>-->
-                <!--<category android:name="android.intent.category.BROWSABLE"/>-->
+            <!--<data android:host="m.cjy.com" android:scheme="arouter"/>-->
+            <!--<action android:name="android.intent.action.VIEW"/>-->
+            <!--<category android:name="android.intent.category.DEFAULT"/>-->
+            <!--<category android:name="android.intent.category.BROWSABLE"/>-->
             <!--</intent-filter>-->
         </activity>
         <activity android:name=".MainActivity">

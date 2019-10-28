@@ -17,7 +17,7 @@ object ActivityCollector {
     /**
      * 存放activity的列表
      */
-    val activities: HashMap<Class<*>, Activity>? = LinkedHashMap()
+    private val activities: HashMap<Class<*>, Activity> = LinkedHashMap()
 
 
     /**
@@ -26,7 +26,7 @@ object ActivityCollector {
      * @param activity
      */
     fun addActivity(activity: Activity, clz: Class<*>) {
-        activities!![clz] = activity
+        activities[clz] = activity
     }
 
     /**
@@ -39,10 +39,10 @@ object ActivityCollector {
     fun <T : Activity> isActivityExist(clz: Class<T>): Boolean {
         val res: Boolean
         val activity = getActivity(clz)
-        if (activity == null) {
-            res = false
+        res = if (activity == null) {
+            false
         } else {
-            res = !(activity.isFinishing || activity.isDestroyed)
+            !(activity.isFinishing || activity.isDestroyed)
         }
         return res
     }
@@ -53,8 +53,8 @@ object ActivityCollector {
      * @param clazz Activity 的类对象
      * @return
      */
-    fun <T : Activity> getActivity(clazz: Class<T>): T? {
-        return activities!![clazz] as T?
+    private fun <T : Activity> getActivity(clazz: Class<T>): Activity? {
+        return activities[clazz]
     }
 
     /**
@@ -63,8 +63,8 @@ object ActivityCollector {
      * @param activity
      */
     fun removeActivity(activity: Activity) {
-        if (activities!!.containsValue(activity)) {
-            activities!!.remove(activity.javaClass)
+        if (activities.containsValue(activity)) {
+            activities.remove(activity.javaClass)
         }
     }
 
@@ -72,14 +72,14 @@ object ActivityCollector {
      * 移除所有的Activity
      */
     fun removeAllActivity() {
-        if (activities != null && activities!!.size > 0) {
-            val sets = activities!!.entries
+        if (activities.size > 0) {
+            val sets = activities.entries
             for ((_, value) in sets) {
                 if (!value.isFinishing) {
                     value.finish()
                 }
             }
         }
-        activities!!.clear()
+        activities.clear()
     }
 }

@@ -17,30 +17,24 @@ import com.example.myapplication.BaseViewModel
  * @create: chenjiayou
  * create at 2018/11/20 20:23
  */
-abstract class BaseUIFragment<VM : BaseViewModel, VD : ViewDataBinding> : SwipeBackFragment<VM>() {
+abstract class BaseUIFragment<VM : BaseViewModel, VD : ViewDataBinding> : BaseSwipeBackFragment<VM>() {
     private var mAddFragmentListener: OnAddFragmentListener? = null
     private var mBackHandlerInterface: BackHandlerInterface? = null
     private lateinit var dataBinding: VD
-    protected abstract val layoutId: Int
 
     companion object {
         val TAG = this::class.java.simpleName
     }
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        if (context is OnAddFragmentListener) {
-            mAddFragmentListener = context
-        }
-    }
+    protected abstract fun getLayoutId(): Int
+    protected abstract fun initView()
+    protected abstract fun init()
+    protected abstract fun initEvent()
+    protected abstract fun initData()
 
-    override fun onDetach() {
-        super.onDetach()
-        mAddFragmentListener = null
-    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        dataBinding = DataBindingUtil.inflate(inflater, layoutId, container, false)
+        dataBinding = DataBindingUtil.inflate(inflater, getLayoutId(), container, false)
         return attachToSwipeBack(dataBinding.root)
     }
 
@@ -55,21 +49,25 @@ abstract class BaseUIFragment<VM : BaseViewModel, VD : ViewDataBinding> : SwipeB
     }
 
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        if (context is OnAddFragmentListener) {
+            mAddFragmentListener = context
+        }
+    }
+
+    override fun onDetach() {
+        super.onDetach()
+        mAddFragmentListener = null
+    }
+
+
     fun onBackPressed(): Boolean {
         return false
     }
 
-    protected fun preCreate() {
+    protected fun preCreate() {}
 
-    }
-
-    protected abstract fun initView()
-
-    protected abstract fun init()
-
-    protected abstract fun initEvent()
-
-    protected abstract fun initData()
 
     interface OnAddFragmentListener {
         fun onAddFragment(fromFragment: Fragment, toFragment: Fragment)

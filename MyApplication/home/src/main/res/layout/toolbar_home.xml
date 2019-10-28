@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+    <data/>
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:background="@color/colorAccent"
+            android:gravity="center_vertical"
+            android:layout_height="40dp">
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/icon_size_toolbar"
+                    android:layout_height="@dimen/icon_size_toolbar"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/ic_menus"
+                    android:foreground="?selectableItemBackground"
+                    android:textColor="@color/white"
+                    android:id="@+id/iv_menu" tools:targetApi="m"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/icon_size_toolbar"
+                    android:foreground="?selectableItemBackground"
+                    android:layout_height="@dimen/icon_size_toolbar"
+                    android:src="@drawable/ic_user"
+                    android:layout_marginRight="8dp"
+                    android:id="@+id/iv_avatar" tools:targetApi="m"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="用户01"
+                      android:layout_gravity="center_vertical"
+                      android:textSize="12sp"
+                      android:textColor="@color/white"
+                      android:id="@+id/tv_user_name"/>
+
+        </LinearLayout>
+
+        <View android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_weight="1"/>
+
+        <LinearLayout android:layout_width="wrap_content"
+                      android:layout_height="wrap_content">
+
+            <FrameLayout android:layout_width="@dimen/layout_size_toolbar"
+                         android:layout_gravity="center_vertical"
+
+                         android:layout_height="@dimen/layout_size_toolbar">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/icon_size_toolbar"
+                        android:layout_height="@dimen/icon_size_toolbar"
+                        android:foreground="?selectableItemBackground"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_alarm"
+                        android:id="@+id/ic_alarm"/>
+
+                <TextView android:layout_width="@dimen/note_size_toolbar"
+                          android:layout_height="@dimen/note_size_toolbar"
+                          android:background="@drawable/shape_toolbar_text"
+                          android:gravity="center"
+                          android:layout_marginRight="3dp"
+                          android:layout_marginTop="3dp"
+                          android:textSize="@dimen/note_text_size_toolbar"
+                          android:layout_gravity="top|right"
+                          android:textColor="@color/black"
+                          tools:text="9"/>
+            </FrameLayout>
+
+            <FrameLayout android:layout_width="@dimen/layout_size_toolbar"
+                         android:layout_gravity="center_vertical"
+
+                         android:layout_height="@dimen/layout_size_toolbar">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/icon_size_toolbar"
+                        android:layout_height="@dimen/icon_size_toolbar"
+                        android:layout_gravity="center"
+                        android:foreground="?selectableItemBackground"
+                        android:src="@drawable/ic_application"
+                        android:id="@+id/iv_app"/>
+
+                <TextView android:layout_width="@dimen/note_size_toolbar"
+                          android:layout_height="@dimen/note_size_toolbar"
+                          android:background="@drawable/shape_toolbar_text"
+                          android:gravity="center"
+                          android:layout_marginRight="3dp"
+                          android:layout_marginTop="3dp"
+                          android:textSize="@dimen/note_text_size_toolbar"
+                          android:layout_gravity="top|right"
+                          android:textColor="@color/black"
+                          tools:text="9"/>
+            </FrameLayout>
+
+            <FrameLayout android:layout_width="@dimen/layout_size_toolbar"
+                         android:layout_gravity="center_vertical"
+
+                         android:layout_height="@dimen/layout_size_toolbar">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/icon_size_toolbar"
+                        android:layout_height="@dimen/icon_size_toolbar"
+                        android:layout_gravity="center"
+                        android:foreground="?selectableItemBackground"
+                        android:src="@drawable/ic_news"
+                        android:id="@+id/iv_news"/>
+
+                <TextView android:layout_width="@dimen/note_size_toolbar"
+                          android:layout_height="@dimen/note_size_toolbar"
+                          android:background="@drawable/shape_toolbar_text"
+                          android:gravity="center"
+                          android:layout_marginRight="3dp"
+                          android:layout_marginTop="3dp"
+                          android:textSize="@dimen/note_text_size_toolbar"
+                          android:layout_gravity="top|right"
+                          android:textColor="@color/black"
+                          tools:text="9"/>
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
