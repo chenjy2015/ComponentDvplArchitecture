@@ -21,7 +21,7 @@ import com.blankj.utilcode.util.LogUtils
 import com.example.baselib.ActivityCollector
 import com.example.baselib.constants.SettingConst
 import com.example.baselib.utils.PUtils
-import com.example.myapplication.BaseViewModel
+import com.example.baselib.viewmodel.BaseViewModel
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import java.util.*

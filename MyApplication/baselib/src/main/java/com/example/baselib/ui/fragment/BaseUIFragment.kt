@@ -8,7 +8,7 @@ import android.content.Context
 import android.view.View
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
-import com.example.myapplication.BaseViewModel
+import com.example.baselib.viewmodel.BaseViewModel
 
 
 /**

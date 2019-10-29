@@ -1,6 +1,6 @@
 package com.example.baselib.ui.activity
 
-import com.example.myapplication.BaseViewModel
+import com.example.baselib.viewmodel.BaseViewModel
 import android.os.Bundle
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil

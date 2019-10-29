@@ -3,7 +3,7 @@ package com.example.baselib.ui.fragment
 import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.example.myapplication.BaseViewModel
+import com.example.baselib.viewmodel.BaseViewModel
 import com.trello.rxlifecycle3.LifecycleProvider
 import com.trello.rxlifecycle3.LifecycleTransformer
 import com.trello.rxlifecycle3.RxLifecycle

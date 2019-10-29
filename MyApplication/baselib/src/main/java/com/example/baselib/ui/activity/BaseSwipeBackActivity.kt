@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.ViewGroup
 import androidx.annotation.DrawableRes
 import com.example.baselib.widget.SwipeBackLayout
-import com.example.myapplication.BaseViewModel
+import com.example.baselib.viewmodel.BaseViewModel
 
 
 /**

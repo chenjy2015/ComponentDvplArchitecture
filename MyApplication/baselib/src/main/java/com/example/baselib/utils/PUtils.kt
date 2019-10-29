@@ -1,6 +1,6 @@
 package com.example.baselib.utils
 
-import com.example.myapplication.BaseViewModel
+import com.example.baselib.viewmodel.BaseViewModel
 import java.lang.reflect.ParameterizedType
 /**
  *

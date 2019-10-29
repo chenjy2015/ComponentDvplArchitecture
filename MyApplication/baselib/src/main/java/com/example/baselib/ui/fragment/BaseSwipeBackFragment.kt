@@ -12,7 +12,7 @@ import androidx.annotation.Nullable
 import com.example.baselib.R
 import com.example.baselib.ui.activity.BaseSwipeBackActivity
 import com.example.baselib.widget.SwipeBackLayout
-import com.example.myapplication.BaseViewModel
+import com.example.baselib.viewmodel.BaseViewModel
 
 
 /**
